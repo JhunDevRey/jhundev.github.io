@@ -263,7 +263,7 @@ document.getElementById("dl_btn").addEventListener("click", function(e) {
         if (result.isConfirmed) {
             // Trigger download immediately
             const link = document.createElement("a");
-            link.href = "assets/Jhun Daverey Parol.pdf";
+            link.href = "assets/Jhun Daverey Parol_CV.pdf";
             link.download = "Jhun_Daverey_Parol_CV.pdf";
             document.body.appendChild(link);
             link.click();
