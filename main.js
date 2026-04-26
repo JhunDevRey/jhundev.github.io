@@ -282,45 +282,58 @@ document.getElementById("dl_btn").addEventListener("click", function(e) {
     });
 });
 
-// Modal functionality
-// OPEN MODAL
-  document.querySelectorAll(".open-modal").forEach(button => {
-    button.addEventListener("click", function(e) {
-      e.preventDefault();
+// Contact form submission
+document.querySelector(".php-email-form").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-      const targetId = this.getAttribute("data-target");
-      const modal = document.getElementById(targetId);
+  const form = this;
+  const formData = new FormData(form);
 
-      if (modal) {
-        modal.classList.add("active");
-      }
-    });
-  });
-
-  // CLOSE MODAL (X BUTTON)
-  document.querySelectorAll(".modal-close").forEach(btn => {
-    btn.addEventListener("click", function() {
-      this.closest(".modal-overlay").classList.remove("active");
-    });
-  });
-
-  // CLOSE WHEN CLICK OUTSIDE
-  document.querySelectorAll(".modal-overlay").forEach(modal => {
-    modal.addEventListener("click", function(e) {
-      if (e.target === modal) {
-        modal.classList.remove("active");
-      }
-    });
-  });
-
-  // OPTIONAL: CLOSE WITH ESC KEY
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "Escape") {
-      document.querySelectorAll(".modal-overlay").forEach(modal => {
-        modal.classList.remove("active");
-      });
+  Swal.fire({
+    title: "Sending...",
+    text: "Please wait while we send your message",
+    allowOutsideClick: false,
+    didOpen: () => {
+      Swal.showLoading();
     }
   });
+
+  fetch("forms/contact.php", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(data => {
+
+    if (data.trim() === "success") {
+      Swal.fire({
+        icon: "success",
+        title: "Message Sent!",
+        text: "Your message was sent successfully.",
+        confirmButtonColor: "#28a745"
+      });
+
+      form.reset();
+
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Failed to Send",
+        text: "Something went wrong. Please try again.",
+        confirmButtonColor: "#ff4d4f"
+      });
+    }
+
+  })
+  .catch(() => {
+    Swal.fire({
+      icon: "error",
+      title: "Server Error",
+      text: "Cannot connect to server.",
+      confirmButtonColor: "#ff4d4f"
+    });
+  });
+});
 
 // disabling inspect element
 document.addEventListener('contextmenu', function(e) {
@@ -335,3 +348,52 @@ document.addEventListener('keydown', function(e) {
         e.preventDefault();
     }
 });
+
+// disabling right-click on images
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+});
+
+// disabling right-click on links
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+});
+
+// disabling right-click on the entire document
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+// disabling text selection
+document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+});
+
+// disabling drag and drop
+document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+});
+
+// disabling keyboard shortcuts for copy, cut, paste
+document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'v')) ||
+        (e.metaKey && (e.key === 'c' || e.key === 'x' || e.key === 'v'))) {
+        e.preventDefault();
+    }
+});
+
+// disabling developer tools shortcuts
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+        (e.ctrlKey && e.key === 'U')) {
+        e.preventDefault();
+    }
+});
+
+
+
