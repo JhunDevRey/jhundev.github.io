@@ -28,6 +28,8 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/modal.css">
 
+   <!-- Template Main JS File -->
+   <script src="assets/js/main.js"></script>
 </head>
 
 <body class="index-page">
@@ -533,10 +535,10 @@
               </div>
               <h4>Technical</h4>
               <p>Delivers reliable IT support, network configuration, server management, CCTV installation, and Active Directory setup to keep systems secure, stable, and running efficiently.</p>
-              <a href="#" id="modal_1" class="read-more open-modal" data-target="technicalModal">
+              <!-- <a class="read-more open-modal" data-target="technicalModal">
                 <span>Explore</span>
                 <i class="bi bi-arrow-right"></i>
-              </a>
+              </a> -->
             </div>
           </div>
 
@@ -548,10 +550,10 @@
               </div>
               <h4>Development</h4>
               <p>Builds scalable full-stack web and mobile applications using modern technologies, turning ideas into fast, functional, and real-world solutions.</p>
-              <a href="#" id="modal_2" class="read-more open-modal" data-target="developmentModal">
+              <!-- <a class="read-more open-modal" data-target="developmentModal">
                 <span>Explore</span>
                 <i class="bi bi-arrow-right"></i>
-              </a>
+              </a> -->
             </div>
           </div>
 
@@ -562,10 +564,10 @@
               </div>
               <h4>UI/UX Design</h4>
               <p>Designs clean and intuitive interfaces that enhance user experience, improve usability, and create visually engaging digital products.</p>
-              <a href="#" id="modal_3" class="read-more open-modal" data-target="uiuxModal">
+              <!-- <a class="read-more open-modal" data-target="uiuxModal">
                 <span>Explore</span>
                 <i class="bi bi-arrow-right"></i>
-              </a>
+              </a> -->
             </div>
           </div>
 
@@ -576,10 +578,10 @@
               </div>
               <h4>Mobile Apps</h4>
               <p>Develops responsive and high-performance mobile applications with seamless backend integration for practical, real-world use.</p>
-              <a href="#" id="modal_4" class="read-more open-modal" data-target="mobileAppsModal">
+              <!-- <a class="read-more open-modal" data-target="mobileAppsModal">
                 <span>Explore</span>
                 <i class="bi bi-arrow-right"></i>
-              </a>
+              </a> -->
             </div>
           </div>
 
@@ -609,7 +611,7 @@
      <!-- Modal technical -->
      <div id="technicalModal" class="modal-overlay">
         <div class="modal-box">
-          
+
           <span class="modal-close">&times;</span>
 
           <h2>Technical</h2>
@@ -623,6 +625,21 @@
             <li>✔ UI/UX Design</li>
             <li>✔ System Integration</li>
           </ul>
+
+          <!-- 🔥 IMAGE CAROUSEL (OUTSIDE modal-box for full width feel) -->
+        <div class="modal-carousel-wrapper">
+
+          <button class="carousel-btn prev">&#10094;</button>
+
+          <div class="modal-carousel">
+            <img src="/assets/img/portfolio/dsms_login.png" class="carousel-item active" />
+            <img src="/assets/img/portfolio/dsms_dashboard.png" class="carousel-item" />
+            <img src="/assets/img/portfolio/dsms_signup.png" class="carousel-item" />
+          </div>
+
+          <button class="carousel-btn next">&#10095;</button>
+
+        </div>
         </div>
       </div>
 
@@ -711,14 +728,21 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-creative">
               <div class="portfolio-card">
                 <div class="portfolio-image-container">
-                  <img src="assets/img/portfolio/Home_web.png" alt="Creative Project" class="img-fluid" loading="lazy">
+                  <img src="assets/img/portfolio/website/Home_web.png" alt="Creative Project" class="img-fluid" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-info">
                       <span class="project-category">Business Website Template</span>
                       <h4>Ready to Use as a Starting Point</h4>
                     </div>
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/contac_footer_web.png" class="glightbox portfolio-link">
+                      <a href="assets/img/portfolio/website/Home_web.png" class="glightbox portfolio-link">1
+                      <a href="assets/img/portfolio/website/Services_web.png" class="glightbox portfolio-link">2
+                      <a href="assets/img/portfolio/website/WCS_web.png" class="glightbox portfolio-link">3
+                      <a href="assets/img/portfolio/website/Testimonials_web.png" class="glightbox portfolio-link">4
+                      <a href="assets/img/portfolio/website/Gallery_web.png" class="glightbox portfolio-link">5
+                      <a href="assets/img/portfolio/website/Contact1_web.png" class="glightbox portfolio-link">6
+                      <a href="assets/img/portfolio/website/Contact2_web.png" class="glightbox portfolio-link">7
+                      <a href="assets/img/portfolio/website/Footer_web.png" class="glightbox portfolio-link">8
                         <i class="bi bi-plus-lg"></i>
                       </a>
                       <a href="#" class="portfolio-details">
@@ -736,18 +760,26 @@
                 </div>
               </div>
             </div>
-
+<!------------------------------ SYSTEM ------------------------------->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-digital">
               <div class="portfolio-card">
                 <div class="portfolio-image-container">
-                  <img src="assets/img/portfolio/dsms_login.png" alt="Digital Project" class="img-fluid" loading="lazy">
+                  <img src="assets/img/portfolio/system/dsms_login.png" alt="Digital Project" class="img-fluid" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-info">
                       <span class="project-category">Web Application</span>
                       <h4>Digital Student Management System</h4>
                     </div>
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/dsms_dashboard.png"class="glightbox portfolio-link">
+                      <a href="assets/img/portfolio/system/dsms_login.png"class="glightbox portfolio-link">1
+                      <a href="assets/img/portfolio/system/dsms_signup.png"class="glightbox portfolio-link">2
+                      <a href="assets/img/portfolio/system/dsms_dashboard.png"class="glightbox portfolio-link">3
+                      <a href="assets/img/portfolio/system/dsms_studentslist.png"class="glightbox portfolio-link">4
+                      <a href="assets/img/portfolio/system/dsms_addstudent.png"class="glightbox portfolio-link">5
+                      <a href="assets/img/portfolio/system/dsms_editstudent.png"class="glightbox portfolio-link">6
+                      <a href="assets/img/portfolio/system/dsms_userslist.png"class="glightbox portfolio-link">7
+                      <a href="assets/img/portfolio/system/dsms_adduser.png"class="glightbox portfolio-link">8
+                      <a href="assets/img/portfolio/system/dsms_edituser.png"class="glightbox portfolio-link">9
                         <i class="bi bi-plus-lg"></i>
                       </a>
                       <a href="#" class="portfolio-details">
@@ -758,44 +790,80 @@
                 </div>
                 <div class="portfolio-meta">
                   <div class="project-tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
                     <span class="tag">System</span>
-                    <span class="tag">Development</span>
                   </div>
-                  <div class="project-year">2024</div>
+                  <div class="project-year">2026</div>
                 </div>
               </div>
             </div>
-
+<!-------------------------- TECHNICAL -------------------------->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-strategy">
               <div class="portfolio-card">
                 <div class="portfolio-image-container">
-                  <img src="assets/img/portfolio/portfolio-3.webp" alt="Strategy Project" class="img-fluid" loading="lazy">
+                  <img src="/assets/img/portfolio/technical/tech1.jpg" alt="Strategy Project" class="img-fluid" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-info">
-                      <span class="project-category">Brand Strategy</span>
-                      <h4>Market Positioning</h4>
+                      <span class="project-category">CCTV Installation</span>
+                      <h4>IP Camera System, Monitoring, and Management</h4>
                     </div>
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/portfolio-3.webp" class="glightbox portfolio-link">
-                        <i class="bi bi-plus-lg"></i>
-                      </a>
-                      <a href="#" class="portfolio-details">
-                        <i class="bi bi-arrow-right"></i>
-                      </a>
+                        <a href="/assets/img/portfolio/technical/tech1.jpg" class="glightbox portfolio-link">1
+                        <a href="/assets/img/portfolio/technical/tech2.jpg" class="glightbox portfolio-link">2
+                        <a href="/assets/img/portfolio/technical/tech3.jpg" class="glightbox portfolio-link">3
+                        <a href="/assets/img/portfolio/technical/tech7.jpg" class="glightbox portfolio-link">4
+                        <a href="/portfolio-details.html" class="portfolio-details">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
                     </div>
                   </div>
                 </div>
                 <div class="portfolio-meta">
                   <div class="project-tags">
-                    <span class="tag">Strategy</span>
-                    <span class="tag">Consulting</span>
+                    <span class="tag">CCTV Inst.</span>
+                    <span class="tag">NVR / DVR</span>
+                    <span class="tag">IP Camera System</span>
+                  </div>
+                  <div class="project-year">2022</div>
+                </div>
+              </div>
+            </div>
+<!-------------------------- TECHNICAL -------------------------->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-strategy">
+              <div class="portfolio-card">
+                <div class="portfolio-image-container">
+                  <img src="/assets/img/portfolio/technical/tech4.jpg" alt="Strategy Project" class="img-fluid" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                      <span class="project-category">Data Cabinet Setup &amp; Installation</span>
+                      <h4>Cabling Structure, and Management</h4>
+                    </div>
+                    <div class="portfolio-actions">
+                        <a href="/assets/img/portfolio/technical/tech4.jpg" class="glightbox portfolio-link">1
+                        <a href="/assets/img/portfolio/technical/tech5.jpg" class="glightbox portfolio-link">2
+                        <a href="/assets/img/portfolio/technical/tech6.jpg" class="glightbox portfolio-link">3
+                        <a href="/portfolio-details.html" class="portfolio-details">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-meta">
+                  <div class="project-tags">
+                    <span class="tag">Data Cabinet</span>
+                    <span class="tag">Installation</span>
+                    <span class="tag">Cabling</span>
+                    <span class="tag">Networking</span>
                   </div>
                   <div class="project-year">2023</div>
                 </div>
               </div>
             </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
+<!-------------------------- WEBSITE -------------------------->
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
               <div class="portfolio-card">
                 <div class="portfolio-image-container">
                   <img src="assets/img/portfolio/portfolio-4.webp" alt="Development Project" class="img-fluid" loading="lazy">
@@ -822,9 +890,9 @@
                   <div class="project-year">2024</div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-creative">
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-creative">
               <div class="portfolio-card">
                 <div class="portfolio-image-container">
                   <img src="assets/img/portfolio/portfolio-5.webp" alt="Creative Project" class="img-fluid" loading="lazy">
@@ -851,19 +919,19 @@
                   <div class="project-year">2024</div>
                 </div>
               </div>
-            </div>
-
+            </div> -->
+<!------------------------------ SYSTEM ------------------------------->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-digital">
               <div class="portfolio-card">
                 <div class="portfolio-image-container">
-                  <img src="assets/img/portfolio/ems_login.png" alt="Digital Project" class="img-fluid" loading="lazy">
+                  <img src="assets/img/portfolio/system/ems_login.png" alt="Digital Project" class="img-fluid" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-info">
                       <span class="project-category">Web Application</span>
                       <h4>Employee Management System</h4>
                     </div>
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/ems_userslist.png" class="glightbox portfolio-link">
+                      <a href="assets/img/portfolio/system/ems_userslist.png" class="glightbox portfolio-link">
                         <i class="bi bi-plus-lg"></i>
                       </a>
                       <a href="#" class="portfolio-details">
@@ -874,10 +942,13 @@
                 </div>
                 <div class="portfolio-meta">
                   <div class="project-tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
                     <span class="tag">System</span>
-                    <span class="tag">Development</span>
                   </div>
-                  <div class="project-year">2023</div>
+                  <div class="project-year">2025</div>
                 </div>
               </div>
             </div>
@@ -969,9 +1040,6 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
 
                   <button type="submit">Start a Conversation</button>
                 </div>
